@@ -13,7 +13,7 @@ function App() {
                     { type: 'divider' },
                     { src: imgBrand, url: '../one', title: 'Два', exact: true },
                 ]}
-                itemsButtom={[
+                itemsBottom={[
                     {
                         src: imgBrand,
                         url: '../three',

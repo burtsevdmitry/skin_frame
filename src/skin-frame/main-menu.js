@@ -20,7 +20,7 @@ import { NavLink, useLocation } from 'react-router-dom'
     ]
  */
 
-const MainMenu = ({ brand, items, itemsButtom }) => {
+const MainMenu = ({ brand, items, itemsBottom }) => {
     const location = useLocation()
 
     const drawItems = (aClassName, aItems) => {
@@ -75,8 +75,8 @@ const MainMenu = ({ brand, items, itemsButtom }) => {
                 {items && items.length > 0
                     ? drawItems('main-menu_items', items)
                     : null}
-                {itemsButtom && itemsButtom.length > 0
-                    ? drawItems('main-menu_bottom', itemsButtom)
+                {itemsBottom && itemsBottom.length > 0
+                    ? drawItems('main-menu_bottom', itemsBottom)
                     : null}
             </div>
         </div>
