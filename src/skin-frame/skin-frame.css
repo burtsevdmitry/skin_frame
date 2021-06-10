@@ -13,5 +13,12 @@ body {
   height: calc(100vh - 20px);
   width: calc(100% - 20px);
   background-color: #FDFDFD;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+}
+.main .main-content {
+  width: calc(100% - 85px);
+  height: 100%;
 }
 /*# sourceMappingURL=skin-frame.css.map */

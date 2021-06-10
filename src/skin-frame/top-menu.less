@@ -1,0 +1,41 @@
+@import "common";
+
+.top-menu {
+  width: 100%;
+  height: @topMenuHeight;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0 0 40px -20px darken(@topMenuColor, 15%);
+
+  .top-menu_items {
+    display: flex;
+    flex-direction: row;
+    padding-left: @padding;
+
+    .top-menu_item {
+      height: @topMenuHeight;
+      line-height: @topMenuHeight;
+      padding: 0 @padding2x;
+      cursor: pointer;
+
+      a {
+        display: block;
+        height: @topMenuHeight;
+        line-height: @topMenuHeight;
+        text-decoration: none;
+        color: @primaryTextColor;
+      }
+
+      &:hover {
+        background-color: darken(@topMenuColor, 2%);
+      }
+    }
+
+    .top-menu_item__active {
+      border-bottom: 3px solid @primaryColor;
+      height: calc(@topMenuHeight - 3px)
+    }
+  }
+}

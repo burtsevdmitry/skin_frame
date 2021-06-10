@@ -1,7 +1,9 @@
+@import "common";
+
 body {
   margin: 0;
   padding: 0px;
-  background-color: #979EA7;
+  background-color: @backgroundColor;
   min-height: 100vh;
   max-height: 100vh;
   height: 100vh;
@@ -10,8 +12,16 @@ body {
 }
 
 .main {
-  margin: 10px;
-  height: calc(100vh - 20px);
-  width: calc(100% - 20px);
-  background-color: #FDFDFD;
+  margin: @padding;
+  height: calc(100vh - @padding2x);
+  width: calc(100% - @padding2x);
+  background-color: @windowColor;
+  border-radius: @radius2x;
+  overflow: hidden;
+  display: flex;
+
+  .main-content {
+    width: calc(100% - @mainMenuWidth);
+    height: 100%;
+  }
 }
