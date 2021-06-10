@@ -30,6 +30,7 @@ function App() {
                         { title: 'Two', url: '../one/two', exact: true },
                         { title: 'Three', url: '../one/three', exact: true },
                     ]}
+                    itemsRight={[{ component: <button>some</button> }]}
                 />
             </div>
         </div>

@@ -7,29 +7,40 @@
   background-color: white;
   box-shadow: 0 0 40px -20px #d9d9d9;
 }
-.top-menu .top-menu_items {
+.top-menu .top-menu_items,
+.top-menu .top-menu_right {
   display: flex;
   flex-direction: row;
   padding-left: 10px;
 }
-.top-menu .top-menu_items .top-menu_item {
+.top-menu .top-menu_items .top-menu_item,
+.top-menu .top-menu_right .top-menu_item {
   height: 85px;
   line-height: 85px;
   padding: 0 20px;
   cursor: pointer;
 }
-.top-menu .top-menu_items .top-menu_item a {
+.top-menu .top-menu_items .top-menu_item a,
+.top-menu .top-menu_right .top-menu_item a {
   display: block;
   height: 85px;
   line-height: 85px;
   text-decoration: none;
   color: #7a7a7a;
 }
-.top-menu .top-menu_items .top-menu_item:hover {
+.top-menu .top-menu_items .top-menu_item:hover,
+.top-menu .top-menu_right .top-menu_item:hover {
   background-color: #fafafa;
 }
-.top-menu .top-menu_items .top-menu_item__active {
+.top-menu .top-menu_items .top-menu_item__active,
+.top-menu .top-menu_right .top-menu_item__active {
   border-bottom: 3px solid #97fc6e;
   height: calc(85px - 3px);
+}
+.top-menu .top-menu_items .top-menu_component,
+.top-menu .top-menu_right .top-menu_component {
+  height: 85px;
+  line-height: 85px;
+  padding: 0 20px;
 }
 /*# sourceMappingURL=top-menu.css.map */

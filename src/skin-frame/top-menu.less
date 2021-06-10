@@ -9,7 +9,8 @@
   background-color: white;
   box-shadow: 0 0 40px -20px darken(@topMenuColor, 15%);
 
-  .top-menu_items {
+  .top-menu_items,
+  .top-menu_right {
     display: flex;
     flex-direction: row;
     padding-left: @padding;
@@ -36,6 +37,12 @@
     .top-menu_item__active {
       border-bottom: 3px solid @primaryColor;
       height: calc(@topMenuHeight - 3px)
+    }
+
+    .top-menu_component {
+      height: @topMenuHeight;
+      line-height: @topMenuHeight;
+      padding: 0 @padding2x;
     }
   }
 }
