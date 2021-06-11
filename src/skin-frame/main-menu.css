@@ -44,8 +44,9 @@
 }
 .main-menu .main-menu_items .main-menu_item img,
 .main-menu .main-menu_bottom .main-menu_item img {
-  width: calc(85px - 20px);
-  height: calc(85px - 20px);
+  margin: 5px;
+  width: calc(85px - 1.5 * 20px);
+  height: calc(85px - 1.5 * 20px);
   -o-object-fit: cover;
   object-fit: cover;
   object-position: center;

@@ -45,8 +45,9 @@
         background-color: lighten(@mainMenuColor, 10%);
       }
       img {
-        width: calc(@mainMenuWidth - @padding2x);
-        height: calc(@mainMenuWidth - @padding2x);
+        margin: 0.5 * @padding;
+        width: calc(@mainMenuWidth - 1.5 * @padding2x);
+        height: calc(@mainMenuWidth - 1.5 * @padding2x);
         -o-object-fit: cover;
         object-fit: cover;
         object-position: center;
