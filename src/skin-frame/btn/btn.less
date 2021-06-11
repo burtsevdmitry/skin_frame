@@ -1,0 +1,85 @@
+@import "../common";
+
+.btnStyle(@background: @btnPrimaryColor, @font: @btnTextPrimaryColor){
+  padding: @padding @padding2x;
+  display: inline-block;
+  border-radius: @radius;
+  margin: @padding;
+  border: 1px solid @background;
+  background-color: @background;
+  color: @font;
+  cursor: pointer;
+
+  &.btn__block {
+    display: block;
+    width: calc(100% - 3 * @padding2x);
+    text-align: center;
+  }
+
+  &:hover {
+    background-color: darken(@background, 10%);
+  }
+
+  &.btn__outline {
+    background-color: fade(@background, 0%);
+    border-width: 2px;
+    &:hover {
+      background-color: fade(@background, 15%);
+    }
+  }
+
+  &.btn__icon {
+    display: inline-flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    img {
+      height: 48px;
+      width: 48px;
+      -o-object-fit: cover;
+      object-fit: cover;
+      object-position: center;
+      margin-right: @padding;
+    }
+  }
+
+  &.btn__only-icon {
+    padding: 0;
+    width: 48px;
+    height: 48px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      object-position: center;
+      margin-right: 0;
+    }
+  }
+}
+
+.btn {
+  .btnStyle(@btnPrimaryColor, @btnTextPrimaryColor);
+}
+
+.btn.secondary {
+  .btnStyle(@btnSecondaryColor, @btnTextSecondaryColor);
+}
+
+.btn.success {
+  .btnStyle(@btnSuccessColor, @btnTextSuccessColor);
+}
+
+.btn.warning {
+  .btnStyle(@btnWarningColor, @btnTextWarningColor);
+}
+
+.btn.danger {
+  .btnStyle(@btnDangerColor, @btnTextDangerColor);
+}
+
+.btn.info {
+  .btnStyle(@btnInfoColor, @btnTextInfoColor);
+}

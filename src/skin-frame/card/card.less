@@ -1,0 +1,28 @@
+@import "../common";
+
+.card {
+  padding: @padding2x;
+  background-color: @windowColor;
+  border: 2px solid @primaryColor;
+  border-radius: @radius2x;
+  max-width: 992px;
+  margin: auto;
+  box-shadow: 0 3px 5px 3px rgba(0, 0, 0, .05);
+
+  .card_header {
+    padding: @padding;
+    margin: 0 0 @padding;
+    color: @headersColor;
+    border-bottom: 2px solid @headersColor;
+  }
+
+  .card_main {
+    padding: 0 @padding;
+  }
+
+  .card_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,133 @@
+.tag {
+  padding: 10px 10px 10px 20px;
+  display: inline-block;
+  margin: 10px;
+  border: 1px solid #97fc6e;
+  background-color: rgba(151, 252, 110, 0.15);
+  color: #1f1f1f;
+}
+.tag:before {
+  content: ' ';
+  width: 15px;
+  height: 15px;
+  background-color: #97fc6e;
+  border-radius: 10px;
+  float: left;
+  position: relative;
+  top: 8px;
+  left: -10px;
+}
+.tag:hover {
+  background-color: rgba(151, 252, 110, 0.4);
+}
+.tag.secondary {
+  padding: 10px 10px 10px 20px;
+  display: inline-block;
+  margin: 10px;
+  border: 1px solid #8c8c8c;
+  background-color: rgba(140, 140, 140, 0.15);
+  color: #1f1f1f;
+}
+.tag.secondary:before {
+  content: ' ';
+  width: 15px;
+  height: 15px;
+  background-color: #8c8c8c;
+  border-radius: 10px;
+  float: left;
+  position: relative;
+  top: 8px;
+  left: -10px;
+}
+.tag.secondary:hover {
+  background-color: rgba(140, 140, 140, 0.4);
+}
+.tag.success {
+  padding: 10px 10px 10px 20px;
+  display: inline-block;
+  margin: 10px;
+  border: 1px solid #a2d364;
+  background-color: rgba(162, 211, 100, 0.15);
+  color: #124601;
+}
+.tag.success:before {
+  content: ' ';
+  width: 15px;
+  height: 15px;
+  background-color: #a2d364;
+  border-radius: 10px;
+  float: left;
+  position: relative;
+  top: 8px;
+  left: -10px;
+}
+.tag.success:hover {
+  background-color: rgba(162, 211, 100, 0.4);
+}
+.tag.warning {
+  padding: 10px 10px 10px 20px;
+  display: inline-block;
+  margin: 10px;
+  border: 1px solid #fcbe6e;
+  background-color: rgba(252, 190, 110, 0.15);
+  color: #773e00;
+}
+.tag.warning:before {
+  content: ' ';
+  width: 15px;
+  height: 15px;
+  background-color: #fcbe6e;
+  border-radius: 10px;
+  float: left;
+  position: relative;
+  top: 8px;
+  left: -10px;
+}
+.tag.warning:hover {
+  background-color: rgba(252, 190, 110, 0.4);
+}
+.tag.danger {
+  padding: 10px 10px 10px 20px;
+  display: inline-block;
+  margin: 10px;
+  border: 1px solid #fc7e72;
+  background-color: rgba(252, 126, 114, 0.15);
+  color: #720101;
+}
+.tag.danger:before {
+  content: ' ';
+  width: 15px;
+  height: 15px;
+  background-color: #fc7e72;
+  border-radius: 10px;
+  float: left;
+  position: relative;
+  top: 8px;
+  left: -10px;
+}
+.tag.danger:hover {
+  background-color: rgba(252, 126, 114, 0.4);
+}
+.tag.info {
+  padding: 10px 10px 10px 20px;
+  display: inline-block;
+  margin: 10px;
+  border: 1px solid #80bafc;
+  background-color: rgba(128, 186, 252, 0.15);
+  color: #011472;
+}
+.tag.info:before {
+  content: ' ';
+  width: 15px;
+  height: 15px;
+  background-color: #80bafc;
+  border-radius: 10px;
+  float: left;
+  position: relative;
+  top: 8px;
+  left: -10px;
+}
+.tag.info:hover {
+  background-color: rgba(128, 186, 252, 0.4);
+}
+/*# sourceMappingURL=tag.css.map */

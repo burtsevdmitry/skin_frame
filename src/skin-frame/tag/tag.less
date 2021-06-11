@@ -1,0 +1,44 @@
+@import "../common";
+
+.tagClass(@background, @font) {
+  padding: @padding @padding @padding 2*@padding;
+  display: inline-block;
+  margin: @padding;
+  border: 1px solid @background;
+  background-color: fade(@background, 15%);
+  color: @font;
+  &:before {
+    content: ' ';
+    width: 15px;
+    height: 15px;
+    background-color: @background;
+    border-radius: @radius;
+    float: left;
+    position: relative;
+    top: 8px;
+    left: -@radius;
+  }
+
+  &:hover {
+    background-color: fade(@background, 40%);
+  }
+}
+
+.tag {
+  .tagClass(@btnPrimaryColor, @btnTextPrimaryColor)
+}
+.tag.secondary {
+  .tagClass(@btnSecondaryColor, @btnTextSecondaryColor)
+}
+.tag.success {
+  .tagClass(@btnSuccessColor, @btnTextSuccessColor)
+}
+.tag.warning {
+  .tagClass(@btnWarningColor, @btnTextWarningColor)
+}
+.tag.danger {
+  .tagClass(@btnDangerColor, @btnTextDangerColor)
+}
+.tag.info {
+  .tagClass(@btnInfoColor, @btnTextInfoColor)
+}

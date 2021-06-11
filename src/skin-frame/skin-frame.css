@@ -8,6 +8,9 @@ body {
   width: 100%;
   overflow: hidden;
 }
+* {
+  transition: all 0.2s ease-in;
+}
 .main {
   margin: 10px;
   height: calc(100vh - 20px);
@@ -20,5 +23,11 @@ body {
 .main .main-content {
   width: calc(100% - 85px);
   height: 100%;
+}
+.main .main-content .content-layout {
+  width: 100%;
+  height: calc(100% - 85px - 2 * 20px);
+  overflow: auto;
+  padding: 10px 0 20px;
 }
 /*# sourceMappingURL=skin-frame.css.map */

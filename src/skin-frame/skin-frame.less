@@ -11,6 +11,8 @@ body {
   overflow: hidden;
 }
 
+* {transition: all 0.2s ease-in};
+
 .main {
   margin: @padding;
   height: calc(100vh - @padding2x);
@@ -20,8 +22,15 @@ body {
   overflow: hidden;
   display: flex;
 
-  .main-content {
-    width: calc(100% - @mainMenuWidth);
-    height: 100%;
+   .main-content {
+     width: calc(100% - @mainMenuWidth);
+     height: 100%;
+
+     .content-layout {
+       width: 100%;
+       height: calc(100% - @topMenuHeight - 2 * @padding2x);
+       overflow: auto;
+       padding: @padding 0 @padding2x;
+     }
   }
 }
