@@ -181,7 +181,14 @@ function App() {
                     <Card title={'Some title'}>
                         Some Text
                         <CardFooter>
-                            <Btn title={'primary'} type={'primary'} />
+                            <Btn
+                                title={'info'}
+                                type={'primary'}
+                                outline={true}
+                                callback={() => {
+                                    alert(1)
+                                }}
+                            />
                             <Btn title={'warning'} type={'warning'} />
                             <Btn title={'danger'} type={'danger'} />
                         </CardFooter>

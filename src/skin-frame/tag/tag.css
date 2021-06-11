@@ -1,5 +1,5 @@
 .tag {
-  padding: 10px 10px 10px 20px;
+  padding: 5px 10px 5px 20px;
   display: inline-block;
   margin: 10px;
   border: 1px solid #97fc6e;
@@ -21,7 +21,7 @@
   background-color: rgba(151, 252, 110, 0.4);
 }
 .tag.secondary {
-  padding: 10px 10px 10px 20px;
+  padding: 5px 10px 5px 20px;
   display: inline-block;
   margin: 10px;
   border: 1px solid #8c8c8c;
@@ -43,7 +43,7 @@
   background-color: rgba(140, 140, 140, 0.4);
 }
 .tag.success {
-  padding: 10px 10px 10px 20px;
+  padding: 5px 10px 5px 20px;
   display: inline-block;
   margin: 10px;
   border: 1px solid #a2d364;
@@ -65,7 +65,7 @@
   background-color: rgba(162, 211, 100, 0.4);
 }
 .tag.warning {
-  padding: 10px 10px 10px 20px;
+  padding: 5px 10px 5px 20px;
   display: inline-block;
   margin: 10px;
   border: 1px solid #fcbe6e;
@@ -87,7 +87,7 @@
   background-color: rgba(252, 190, 110, 0.4);
 }
 .tag.danger {
-  padding: 10px 10px 10px 20px;
+  padding: 5px 10px 5px 20px;
   display: inline-block;
   margin: 10px;
   border: 1px solid #fc7e72;
@@ -109,7 +109,7 @@
   background-color: rgba(252, 126, 114, 0.4);
 }
 .tag.info {
-  padding: 10px 10px 10px 20px;
+  padding: 5px 10px 5px 20px;
   display: inline-block;
   margin: 10px;
   border: 1px solid #80bafc;
