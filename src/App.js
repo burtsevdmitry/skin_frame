@@ -9,6 +9,9 @@ import CardFooter from './skin-frame/card/card-footer'
 import DataTable from './skin-frame/data-table/data-table'
 import DataInput from './skin-frame/data-input/data-input'
 import DataToggle from './skin-frame/data-toggle/data-toggle'
+import Menu from './skin-frame/menu/menu'
+import DropDownMenu from './skin-frame/menu/drop-down-menu'
+import React from 'react'
 
 function App() {
     return (
@@ -16,14 +19,19 @@ function App() {
             <MainMenu
                 brand={{ src: imgBrand, url: '../' }}
                 items={[
-                    { src: imgBrand, url: '../', title: 'Один', exact: true },
+                    { src: imgBrand, url: '/', title: 'Один', exact: true },
                     { type: 'divider' },
-                    { src: imgBrand, url: '../one', title: 'Два', exact: true },
+                    {
+                        src: imgBrand,
+                        url: '/one',
+                        title: 'Два',
+                        exact: false,
+                    },
                 ]}
                 itemsBottom={[
                     {
                         src: imgBrand,
-                        url: '../three',
+                        url: '/three',
                         title: 'Три',
                         exact: true,
                     },
@@ -37,9 +45,61 @@ function App() {
                         { title: 'Two', url: '../one/two', exact: true },
                         { title: 'Three', url: '../one/three', exact: true },
                     ]}
-                    itemsRight={[{ component: <button>some</button> }]}
+                    itemsRight={[
+                        {
+                            component: (
+                                <DropDownMenu
+                                    align={'right'}
+                                    menuItems={[
+                                        { title: 'Меню 1' },
+                                        { title: 'Меню 2' },
+                                    ]}
+                                >
+                                    <Btn
+                                        type={'primary'}
+                                        title={'user'}
+                                        outline={true}
+                                    >
+                                        <span className={'dropdown_arrow'} />
+                                    </Btn>
+                                </DropDownMenu>
+                            ),
+                        },
+                    ]}
                 />
                 <div className={'content-layout'}>
+                    <DropDownMenu
+                        menuItems={[{ title: 'Меню 1' }, { title: 'Меню 2' }]}
+                    >
+                        <Btn type={'primary'} title={'user'} outline={true}>
+                            <span className={'dropdown_arrow'} />
+                        </Btn>
+                    </DropDownMenu>
+
+                    <Menu
+                        items={[
+                            { title: 'Меню 1', url: './sub1', disabled: false },
+                            { title: 'Меню 2', url: './sub2', active: true },
+                            {
+                                title: 'Меню 2.5',
+                                onClick: (item) => {
+                                    console.log(item)
+                                },
+                            },
+                            { title: 'Меню 3', url: './sub3', disabled: true },
+                            {
+                                title: (
+                                    <div style={{ width: 400 }}>
+                                        some text
+                                        <Btn title={'btn'} type={'danger'} />
+                                    </div>
+                                ),
+                                url: './sub4',
+                                disabled: false,
+                            },
+                        ]}
+                    />
+
                     <Card title={'Some title'}>
                         <DataInput
                             label={'login'}
@@ -80,7 +140,9 @@ function App() {
                         block={false}
                         type={'primary'}
                         outline={false}
-                    />
+                    >
+                        <DataToggle label={'toggle'} value={false} />
+                    </Btn>
                     <Btn
                         title={'secondary'}
                         block={false}
@@ -249,12 +311,10 @@ function App() {
                                 title: 'Администратор',
                                 renderCallback: (fieldName, value) => {
                                     return (
-                                        <Tag
-                                            style={{ margin: 'auto' }}
-                                            title={value ? 'Да' : 'Нет'}
-                                            type={
-                                                value ? 'success' : 'secondary'
-                                            }
+                                        <DataToggle
+                                            align={'center'}
+                                            value={value}
+                                            readonly={true}
                                         />
                                     )
                                 },

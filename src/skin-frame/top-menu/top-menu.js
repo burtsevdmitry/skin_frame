@@ -23,7 +23,8 @@ const TopMenu = ({ items, itemsRight }) => {
                         const active =
                             (item.exact &&
                                 item.url.endsWith(location.pathname)) ||
-                            (!item.exact && location.pathname.indexOf(item.url))
+                            (!item.exact &&
+                                location.pathname.indexOf(item.url) >= 0)
                         return (
                             <div
                                 key={idx}

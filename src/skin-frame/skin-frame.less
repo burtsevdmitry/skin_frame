@@ -53,6 +53,18 @@ body {
   border-radius: @radius;
 }
 
+.dropdown_arrow {
+  height: 0;
+  width: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid @menuBorderColor;
+  position: relative;
+  display: inline-block;
+  top: -2px;
+  left: @padding;
+}
+
 ::-webkit-scrollbar-button {
   //background-image: url('');
   background-repeat: no-repeat;

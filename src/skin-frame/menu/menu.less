@@ -1,0 +1,39 @@
+@import "../common";
+
+.menu {
+  border: 1px solid @menuBorderColor;
+  display: flex;
+  flex-direction: column;
+  //margin: @padding;
+  border-radius: @radius;
+  background-color: @windowColor;
+  color: @primaryTextColor;
+  .menu_item {
+    cursor: pointer;
+    width: calc(100% - @padding2x);
+    //text-align: center;
+    padding: 0 @padding;
+    min-height: @inputHeight;
+    line-height: @inputHeight;
+    border-bottom: 1px solid @menuBorderColor;
+    &:hover {
+      background-color: darken(@windowColor, 10%);
+    }
+    &.menu_item__active {
+      background-color: @menuActiveColor;
+      color: @menuActiveTextColor;
+    }
+
+    &.menu_item__disabled {
+      background-color: @menuDisabledColor;
+      color: @menuDisabledTextColor;
+    }
+  }
+  .menu_item:first-child {
+    border-radius: @radius @radius 0 0;
+  }
+  .menu_item:last-child {
+    border: none;
+    border-radius: 0 0 @radius @radius;
+  }
+}

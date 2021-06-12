@@ -46,6 +46,17 @@ body {
   background-color: #617cf8;
   border-radius: 10px;
 }
+.dropdown_arrow {
+  height: 0;
+  width: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #d0d4d9;
+  position: relative;
+  display: inline-block;
+  top: -2px;
+  left: 10px;
+}
 ::-webkit-scrollbar-button {
   background-repeat: no-repeat;
   width: 12px;

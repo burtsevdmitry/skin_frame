@@ -9,7 +9,7 @@ const Btn = ({
     outline,
     callback,
     onlyIcon,
-    iconLeft,
+    children,
 }) => {
     return (
         <div
@@ -21,6 +21,7 @@ const Btn = ({
         >
             {img ? <img src={img} alt={title} /> : null}
             {img && onlyIcon ? null : title}
+            {children}
         </div>
     )
 }

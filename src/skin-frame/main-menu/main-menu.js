@@ -29,7 +29,8 @@ const MainMenu = ({ brand, items, itemsBottom }) => {
                 {aItems.map((item, idx) => {
                     const active =
                         (item.exact && item.url.endsWith(location.pathname)) ||
-                        (!item.exact && location.pathname.indexOf(item.url))
+                        (!item.exact &&
+                            location.pathname.indexOf(item.url) >= 0)
 
                     if (item.type === 'divider') {
                         return <div key={idx} className={'main-menu_divider'} />

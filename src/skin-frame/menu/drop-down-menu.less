@@ -1,0 +1,26 @@
+@import "../common";
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  line-height: calc(@topMenuHeight - 3*@padding2x);
+
+  .dropdown_content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+    box-shadow: 0 0 15px -5px white;
+    &.dropdown_content__right {
+      right: 0;
+    }
+  }
+  &:hover {
+    .dropdown_content {
+      display: block;
+    }
+  }
+}

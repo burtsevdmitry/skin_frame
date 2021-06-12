@@ -6,12 +6,14 @@ const DataToggle = ({
     label,
     labelWidth,
     disabled,
+    readonly,
     onChangeCallback,
+    align,
 }) => {
     const [inputValue, setInputValue] = useState(value)
 
     const doChange = () => {
-        if (disabled) {
+        if (disabled || readonly) {
             return
         }
         setInputValue(!inputValue)
@@ -19,6 +21,7 @@ const DataToggle = ({
             onChangeCallback(inputValue)
         }
     }
+
     return (
         <div className={'data-toggle_container'}>
             {label && (
@@ -31,6 +34,13 @@ const DataToggle = ({
             )}
             <div className={`data-toggle_wrapper`} onClick={doChange}>
                 <div
+                    style={
+                        align === 'center'
+                            ? { marginLeft: 'auto', marginRight: 'auto' }
+                            : align === 'right'
+                            ? { marginLeft: 'auto' }
+                            : {}
+                    }
                     className={`data-toggle 
                         ${inputValue && 'data-toggle__checked'}
                         ${disabled && 'data-toggle__disabled'}`}
