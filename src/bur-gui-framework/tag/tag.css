@@ -10,124 +10,82 @@
   content: ' ';
   width: 12px;
   height: 12px;
-  background-color: #71e554;
   border-radius: 10px;
   float: left;
   position: relative;
   top: 5px;
   left: -10px;
+}
+.tag:before {
+  background-color: #71e554;
 }
 .tag:hover {
   background-color: rgba(113, 229, 84, 0.4);
 }
 .tag.secondary {
-  padding: 5px 10px 5px 20px;
-  display: inline-block;
-  margin: 0 5px;
   border: 1px solid #b1b0b0;
   background-color: rgba(177, 176, 176, 0.15);
   color: #1f1f1f;
 }
 .tag.secondary:before {
-  content: ' ';
-  width: 12px;
-  height: 12px;
   background-color: #b1b0b0;
-  border-radius: 10px;
-  float: left;
-  position: relative;
-  top: 5px;
-  left: -10px;
 }
 .tag.secondary:hover {
   background-color: rgba(177, 176, 176, 0.4);
 }
 .tag.success {
-  padding: 5px 10px 5px 20px;
-  display: inline-block;
-  margin: 0 5px;
   border: 1px solid #c4ec95;
   background-color: rgba(196, 236, 149, 0.15);
   color: #124601;
 }
 .tag.success:before {
-  content: ' ';
-  width: 12px;
-  height: 12px;
   background-color: #c4ec95;
-  border-radius: 10px;
-  float: left;
-  position: relative;
-  top: 5px;
-  left: -10px;
 }
 .tag.success:hover {
   background-color: rgba(196, 236, 149, 0.4);
 }
 .tag.warning {
-  padding: 5px 10px 5px 20px;
-  display: inline-block;
-  margin: 0 5px;
   border: 1px solid #fcbe6e;
   background-color: rgba(252, 190, 110, 0.15);
   color: #773e00;
 }
 .tag.warning:before {
-  content: ' ';
-  width: 12px;
-  height: 12px;
   background-color: #fcbe6e;
-  border-radius: 10px;
-  float: left;
-  position: relative;
-  top: 5px;
-  left: -10px;
 }
 .tag.warning:hover {
   background-color: rgba(252, 190, 110, 0.4);
 }
 .tag.danger {
-  padding: 5px 10px 5px 20px;
-  display: inline-block;
-  margin: 0 5px;
   border: 1px solid #fc7e72;
   background-color: rgba(252, 126, 114, 0.15);
   color: #720101;
 }
 .tag.danger:before {
-  content: ' ';
-  width: 12px;
-  height: 12px;
   background-color: #fc7e72;
-  border-radius: 10px;
-  float: left;
-  position: relative;
-  top: 5px;
-  left: -10px;
 }
 .tag.danger:hover {
   background-color: rgba(252, 126, 114, 0.4);
 }
 .tag.info {
-  padding: 5px 10px 5px 20px;
-  display: inline-block;
-  margin: 0 5px;
   border: 1px solid #9ac5f6;
   background-color: rgba(154, 197, 246, 0.15);
   color: #011472;
 }
 .tag.info:before {
-  content: ' ';
-  width: 12px;
-  height: 12px;
   background-color: #9ac5f6;
-  border-radius: 10px;
-  float: left;
-  position: relative;
-  top: 5px;
-  left: -10px;
 }
 .tag.info:hover {
   background-color: rgba(154, 197, 246, 0.4);
+}
+.tag.none {
+  border: 1px solid #f0f0f0;
+  background-color: rgba(240, 240, 240, 0.15);
+  color: #1f1f1f;
+}
+.tag.none:before {
+  background-color: #f0f0f0;
+}
+.tag.none:hover {
+  background-color: rgba(240, 240, 240, 0.4);
 }
 /*# sourceMappingURL=tag.css.map */

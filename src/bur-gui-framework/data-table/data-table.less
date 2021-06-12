@@ -29,6 +29,12 @@
           position: sticky;
           top: 0;
           z-index: 10;
+          &.data-table_column__clickable {
+            cursor: pointer;
+            &:hover {
+              color: darken(@headersColor, 20%);
+            }
+          }
         }
       }
     }
@@ -40,11 +46,19 @@
           border: none;
           padding: @padding;
           vertical-align: top;
-
         }
 
         &:hover {
           background-color: darken(@tableEvenColor, 5%);
+          -webkit-box-shadow:
+                  0px 5px 5px -5px @tableBorderColor inset,
+                  0px -5px 5px -5px @tableBorderColor inset,;
+          -moz-box-shadow:
+                  0px 5px 5px -5px @tableBorderColor inset,
+                    0px -5px 5px -5px @tableBorderColor inset,;
+          box-shadow:
+                  0px 5px 5px -5px @tableBorderColor inset,
+                    0px -5px 5px -5px @tableBorderColor inset,;
         }
       }
       tr:nth-child(even) {

@@ -18,7 +18,13 @@ data: [{
 }]
  */
 
-const DataTable = ({ columns, data, style }) => {
+const DataTable = ({
+    columns,
+    data,
+    style,
+    rowStyleCallback,
+    columnClickCallback,
+}) => {
     return (
         <div style={style} className={'data-table'}>
             <table>
@@ -29,6 +35,16 @@ const DataTable = ({ columns, data, style }) => {
                                 <th
                                     key={column.fieldName}
                                     style={{ width: column.width }}
+                                    onClick={() => {
+                                        if (columnClickCallback) {
+                                            columnClickCallback(column)
+                                        }
+                                    }}
+                                    className={
+                                        columnClickCallback
+                                            ? 'data-table_column__clickable'
+                                            : ''
+                                    }
                                 >
                                     {column.renderHeaderCallback
                                         ? column.renderHeaderCallback(
@@ -45,7 +61,14 @@ const DataTable = ({ columns, data, style }) => {
                     {data && data.length > 0
                         ? data.map((row, idx) => {
                               return (
-                                  <tr key={idx}>
+                                  <tr
+                                      key={idx}
+                                      style={
+                                          rowStyleCallback
+                                              ? rowStyleCallback(row)
+                                              : {}
+                                      }
+                                  >
                                       {columns.map((column) => {
                                           return (
                                               <td
@@ -65,7 +88,8 @@ const DataTable = ({ columns, data, style }) => {
                                                             column.fieldName,
                                                             row[
                                                                 column.fieldName
-                                                            ]
+                                                            ],
+                                                            row
                                                         )
                                                       : row[column.fieldName]}
                                               </td>

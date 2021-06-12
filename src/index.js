@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
-import './skin-frame/skin-frame.css'
+import './bur-gui-framework/bur-gui-framework.css'
 import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.render(
