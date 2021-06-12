@@ -107,6 +107,7 @@ function App() {
                     </DropDownMenu>
 
                     <Menu
+                        style={{ width: 600 }}
                         items={[
                             { title: 'Меню 1', url: './sub1', disabled: false },
                             { title: 'Меню 2', url: './sub2', active: true },
@@ -328,7 +329,10 @@ function App() {
                                 renderCallback: (fieldName, value) => {
                                     return (
                                         <Tag
-                                            style={{ margin: 'auto' }}
+                                            style={{
+                                                width: 100,
+                                                margin: 'auto',
+                                            }}
                                             title={value ? 'Вкл' : 'Выкл'}
                                             type={value ? 'success' : 'danger'}
                                         />

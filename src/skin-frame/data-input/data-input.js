@@ -11,6 +11,7 @@ const DataInput = ({
     disabled,
     placeholder,
     onChangeCallback,
+    style,
 }) => {
     const [inputValue, setInputValue] = useState(value)
 
@@ -23,7 +24,7 @@ const DataInput = ({
     }
 
     return (
-        <div className={'data-input_container'}>
+        <div style={style} className={'data-input_container'}>
             {label && (
                 <div
                     className={'data-input_label'}

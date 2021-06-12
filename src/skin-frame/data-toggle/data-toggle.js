@@ -9,6 +9,7 @@ const DataToggle = ({
     readonly,
     onChangeCallback,
     align,
+    style,
 }) => {
     const [inputValue, setInputValue] = useState(value)
 
@@ -23,7 +24,7 @@ const DataToggle = ({
     }
 
     return (
-        <div className={'data-toggle_container'}>
+        <div style={style} className={'data-toggle_container'}>
             {label && (
                 <div
                     className={'data-toggle_label'}

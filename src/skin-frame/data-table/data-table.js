@@ -18,9 +18,9 @@ data: [{
 }]
  */
 
-const DataTable = ({ columns, data }) => {
+const DataTable = ({ columns, data, style }) => {
     return (
-        <div className={'data-table'}>
+        <div style={style} className={'data-table'}>
             <table>
                 <thead>
                     <tr>

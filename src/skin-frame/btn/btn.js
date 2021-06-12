@@ -10,9 +10,11 @@ const Btn = ({
     callback,
     onlyIcon,
     children,
+    style,
 }) => {
     return (
         <div
+            style={style}
             onClick={callback}
             className={`btn ${type} ${block ? 'btn__block' : ''} ${
                 outline ? 'btn__outline' : ''

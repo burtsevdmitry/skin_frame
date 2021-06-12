@@ -14,7 +14,7 @@ items: [
 ]
  */
 
-const Menu = ({ items }) => {
+const Menu = ({ items, style }) => {
     const history = useHistory()
 
     const doClick = (item) => {
@@ -29,7 +29,7 @@ const Menu = ({ items }) => {
     }
 
     return (
-        <div className={`menu`}>
+        <div style={style} className={`menu`}>
             {items.map((item, idx) => {
                 return (
                     <div

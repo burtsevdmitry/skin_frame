@@ -6,6 +6,7 @@ const DropDownPlaceholder = ({
     align,
     dropDownWidth,
     children,
+    style,
 }) => {
     const [dropped, setDropped] = useState(false)
 
@@ -31,7 +32,7 @@ const DropDownPlaceholder = ({
     }, [dropped, handleOutsideClick])
 
     return (
-        <div className="dropdown">
+        <div style={style} className="dropdown">
             <span
                 onClick={() => {
                     setDropped(true)
