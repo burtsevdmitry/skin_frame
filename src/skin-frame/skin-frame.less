@@ -34,3 +34,53 @@ body {
      }
   }
 }
+
+.label_required{
+  color: @btnDangerColor;
+  cursor: help;
+}
+
+.label_hint {
+  margin-left: 5px;
+  display: inline-block;
+  width: @radius * 1.5;
+  height: @radius * 1.5;
+  font-size: 8pt;
+  text-align: center;
+  color: white;
+  cursor: help;
+  background-color: #617cf8;
+  border-radius: @radius;
+}
+
+::-webkit-scrollbar-button {
+  //background-image: url('');
+  background-repeat: no-repeat;
+  width: @scrollWidth;
+  height: 0;
+}
+
+::-webkit-scrollbar-track {
+  background-color: @scrollBackground;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: @scrollRadius;
+  border-radius: @scrollRadius;
+  background-color: @scrollThumbColor;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: darken(@scrollThumbColor, 10%);
+}
+
+::-webkit-resizer{
+  //background-image: url('');
+  background-repeat: no-repeat;
+  width: @scrollWidth;
+  height:0;
+}
+
+::-webkit-scrollbar{
+  width: @scrollWidth;
+}

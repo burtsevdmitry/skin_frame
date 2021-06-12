@@ -1,0 +1,44 @@
+@import "../common";
+
+.data-toggle_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: @inputHeight;
+  .data-toggle_label {
+    color: @primaryTextColor;
+  }
+  .data-toggle_wrapper {
+    width: 100%;
+    height: @inputHeight;
+    cursor: pointer;
+    .data-toggle {
+      width: 50px;
+      margin: @padding 0;
+      height: calc(@inputHeight - @padding2x);
+      border: 1px solid @inputBorder;
+      border-radius: @radius;
+      background-color: fade(@btnDangerColor, 20%);
+      .data-toggle_thumb {
+        margin: 2px;
+        width: calc(@inputHeight - @padding2x - 6px);
+        height: calc(@inputHeight - @padding2x - 6px);
+        border: 1px solid @inputBorder;
+        border-radius: @radius;
+        background-color: @windowColor;
+      }
+
+      &.data-toggle__checked {
+        background-color: @primaryColor;
+        .data-toggle_thumb {
+          margin-left: calc(50px - @inputHeight + @padding2x);
+        }
+      }
+
+      &.data-toggle__disabled {
+        background-color: darken(@windowColor, 20%)
+      }
+    }
+  }
+}

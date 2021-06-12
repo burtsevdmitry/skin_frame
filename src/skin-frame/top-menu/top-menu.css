@@ -34,7 +34,7 @@
 }
 .top-menu .top-menu_items .top-menu_item__active,
 .top-menu .top-menu_right .top-menu_item__active {
-  border-bottom: 3px solid #97fc6e;
+  border-bottom: 3px solid #8fec5b;
   height: calc(85px - 3px);
 }
 .top-menu .top-menu_items .top-menu_component,

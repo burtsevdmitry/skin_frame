@@ -6,6 +6,9 @@ import Btn from './skin-frame/btn/btn'
 import Tag from './skin-frame/tag/tag'
 import Card from './skin-frame/card/card'
 import CardFooter from './skin-frame/card/card-footer'
+import DataTable from './skin-frame/data-table/data-table'
+import DataInput from './skin-frame/data-input/data-input'
+import DataToggle from './skin-frame/data-toggle/data-toggle'
 
 function App() {
     return (
@@ -37,6 +40,41 @@ function App() {
                     itemsRight={[{ component: <button>some</button> }]}
                 />
                 <div className={'content-layout'}>
+                    <Card title={'Some title'}>
+                        <DataInput
+                            label={'login'}
+                            value={''}
+                            required={true}
+                            placeholder={'Введите логин'}
+                        />
+                        <DataInput label={'password'} type={'password'} />
+                        <DataInput
+                            label={'password'}
+                            type={'email'}
+                            hint={'Подсказочка'}
+                        />
+                        <DataInput label={'password'} type={'number'} />
+                        <DataToggle label={'toggle'} value={false} />
+                        <DataToggle label={'toggle2'} value={true} />
+                        <DataToggle
+                            label={'toggle3'}
+                            value={false}
+                            disabled={true}
+                        />
+                        <CardFooter>
+                            <Btn
+                                title={'info'}
+                                type={'primary'}
+                                outline={true}
+                                callback={() => {
+                                    alert(1)
+                                }}
+                            />
+                            <Btn title={'warning'} type={'warning'} />
+                            <Btn title={'danger'} type={'danger'} />
+                        </CardFooter>
+                    </Card>
+
                     <Btn
                         title={'primary'}
                         block={false}
@@ -178,21 +216,203 @@ function App() {
                     <Tag title={'danger'} type={'danger'} />
                     <Tag title={'info'} type={'info'} />
 
-                    <Card title={'Some title'}>
-                        Some Text
-                        <CardFooter>
-                            <Btn
-                                title={'info'}
-                                type={'primary'}
-                                outline={true}
-                                callback={() => {
-                                    alert(1)
-                                }}
-                            />
-                            <Btn title={'warning'} type={'warning'} />
-                            <Btn title={'danger'} type={'danger'} />
-                        </CardFooter>
-                    </Card>
+                    <DataTable
+                        columns={[
+                            {
+                                fieldName: 'login',
+                                width: 30 + '%',
+                                title: 'Логин',
+                            },
+                            {
+                                fieldName: 'name',
+                                width: 30 + '%',
+                                title: 'Пользователь',
+                                align: 'left',
+                            },
+                            {
+                                fieldName: 'active',
+                                width: 20 + '%',
+                                title: 'Активность',
+                                renderCallback: (fieldName, value) => {
+                                    return (
+                                        <Tag
+                                            style={{ margin: 'auto' }}
+                                            title={value ? 'Вкл' : 'Выкл'}
+                                            type={value ? 'success' : 'danger'}
+                                        />
+                                    )
+                                },
+                            },
+                            {
+                                fieldName: 'superuser',
+                                width: 20 + '%',
+                                title: 'Администратор',
+                                renderCallback: (fieldName, value) => {
+                                    return (
+                                        <Tag
+                                            style={{ margin: 'auto' }}
+                                            title={value ? 'Да' : 'Нет'}
+                                            type={
+                                                value ? 'success' : 'secondary'
+                                            }
+                                        />
+                                    )
+                                },
+                            },
+                        ]}
+                        data={[
+                            {
+                                login: 'foxjr',
+                                name: 'Dmitry',
+                                active: true,
+                                superuser: false,
+                            },
+                            {
+                                login: 'foxjr',
+                                name: 'Dmitry',
+                                active: true,
+                                superuser: true,
+                            },
+                            {
+                                login: 'foxjr',
+                                name: 'Dmitry',
+                                active: true,
+                                superuser: false,
+                            },
+                            {
+                                login: 'foxjr',
+                                name: 'Dmitry',
+                                active: true,
+                                superuser: false,
+                            },
+                            {
+                                login: 'foxjr',
+                                name: 'Dmitry',
+                                active: false,
+                                superuser: false,
+                            },
+                            {
+                                login: 'foxjr',
+                                name: 'Dmitry',
+                                active: true,
+                                superuser: false,
+                            },
+                            {
+                                login: 'foxjr',
+                                name: 'Dmitry',
+                                active: true,
+                                superuser: false,
+                            },
+                            {
+                                login: 'foxjr',
+                                name: 'Dmitry',
+                                active: true,
+                                superuser: true,
+                            },
+                            {
+                                login: 'foxjr',
+                                name: 'Dmitry',
+                                active: true,
+                                superuser: false,
+                            },
+                            {
+                                login: 'foxjr',
+                                name: 'Dmitry',
+                                active: false,
+                                superuser: false,
+                            },
+                            {
+                                login: 'foxjr',
+                                name: 'Dmitry',
+                                active: true,
+                                superuser: false,
+                            },
+                            {
+                                login: 'foxjr',
+                                name: 'Dmitry',
+                                active: true,
+                                superuser: false,
+                            },
+                            {
+                                login: 'foxjr',
+                                name: 'Dmitry',
+                                active: true,
+                                superuser: false,
+                            },
+                            {
+                                login: 'foxjr',
+                                name: 'Dmitry',
+                                active: false,
+                                superuser: true,
+                            },
+                            {
+                                login: 'foxjr',
+                                name: 'Dmitry',
+                                active: true,
+                                superuser: false,
+                            },
+                            {
+                                login: 'foxjr',
+                                name: 'Dmitry',
+                                active: false,
+                                superuser: false,
+                            },
+                            {
+                                login: 'foxjr',
+                                name: 'Dmitry',
+                                active: true,
+                                superuser: false,
+                            },
+                            {
+                                login: 'foxjr',
+                                name: 'Dmitry',
+                                active: true,
+                                superuser: true,
+                            },
+                            {
+                                login: 'foxjr',
+                                name: 'Dmitry',
+                                active: true,
+                                superuser: false,
+                            },
+                            {
+                                login: 'foxjr',
+                                name: 'Dmitry',
+                                active: false,
+                                superuser: false,
+                            },
+                            {
+                                login: 'foxjr',
+                                name: 'Dmitry',
+                                active: true,
+                                superuser: false,
+                            },
+                            {
+                                login: 'foxjr',
+                                name: 'Dmitry',
+                                active: false,
+                                superuser: false,
+                            },
+                            {
+                                login: 'foxjr',
+                                name: 'Dmitry',
+                                active: true,
+                                superuser: false,
+                            },
+                            {
+                                login: 'foxjr',
+                                name: 'Dmitry',
+                                active: true,
+                                superuser: false,
+                            },
+                            {
+                                login: 'foxjr',
+                                name: 'Dmitry',
+                                active: true,
+                                superuser: false,
+                            },
+                        ]}
+                    />
                 </div>
             </div>
         </div>

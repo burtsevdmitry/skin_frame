@@ -1,0 +1,60 @@
+.data-input_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 42px;
+}
+.data-input_container .data-input_label {
+  color: #7a7a7a;
+}
+.data-input_container .data-input {
+  width: 100%;
+  border: 1px solid #ECECF0;
+  border-radius: 10px;
+  padding: 10px;
+}
+.data-input_container .data-input.data-input__required {
+  background-color: rgba(255, 223, 207, 0.61);
+}
+.data-input_container .data-input:focus {
+  outline: none;
+  border-color: #8fec5b;
+}
+::-webkit-input-placeholder {
+  color: #b7b7b7;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+::-moz-placeholder {
+  color: #b7b7b7;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+:-moz-placeholder {
+  color: #b7b7b7;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+:-ms-input-placeholder {
+  color: #b7b7b7;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+:focus::-webkit-input-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+:focus::-moz-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+:focus:-moz-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+:focus:-ms-input-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+/*# sourceMappingURL=data-input.css.map */

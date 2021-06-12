@@ -1,0 +1,58 @@
+@import "../common";
+
+
+.data-table {
+  margin: @padding;
+  width: calc(100% - @padding2x);
+  max-height: calc(100% - @padding2x);
+  overflow: auto;
+
+  table {
+    width: 100%;
+    border: none;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid @tableBorderColor;
+    border-top: none;
+
+    thead {
+      tr {
+        th {
+          font-weight: bold;
+          text-align: center;
+          border-bottom: 1px solid @tableBorderColor;
+          border-top: 1px solid @tableBorderColor;
+          padding: @padding;
+          background: @tableHeaderColor;
+          color: @headersColor;
+          position: -webkit-sticky; /* for Safari */
+          position: sticky;
+          top: 0;
+          z-index: 10;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          text-align: left;
+          border: none;
+          padding: @padding;
+          vertical-align: top;
+
+        }
+
+        &:hover {
+          background-color: darken(@tableEvenColor, 5%);
+        }
+      }
+      tr:nth-child(even) {
+        background: @tableEvenColor;
+        &:hover {
+          background-color: darken(@tableEvenColor, 5%);
+        }
+      }
+    }
+  }
+}

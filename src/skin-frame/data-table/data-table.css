@@ -1,0 +1,44 @@
+.data-table {
+  margin: 10px;
+  width: calc(100% - 20px);
+  max-height: calc(100% - 20px);
+  overflow: auto;
+}
+.data-table table {
+  width: 100%;
+  border: none;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #979EA7;
+  border-top: none;
+}
+.data-table table thead tr th {
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid #979EA7;
+  border-top: 1px solid #979EA7;
+  padding: 10px;
+  background: #EDEDED;
+  color: #465663;
+  position: -webkit-sticky;
+  /* for Safari */
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.data-table table tbody tr td {
+  text-align: left;
+  border: none;
+  padding: 10px;
+  vertical-align: top;
+}
+.data-table table tbody tr:hover {
+  background-color: #ebebeb;
+}
+.data-table table tbody tr:nth-child(even) {
+  background: #F8F8F8;
+}
+.data-table table tbody tr:nth-child(even):hover {
+  background-color: #ebebeb;
+}
+/*# sourceMappingURL=data-table.css.map */
