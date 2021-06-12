@@ -12,6 +12,7 @@ import DataToggle from './skin-frame/data-toggle/data-toggle'
 import Menu from './skin-frame/menu/menu'
 import DropDownMenu from './skin-frame/menu/drop-down-menu'
 import React from 'react'
+import DropDownPlaceholder from './skin-frame/menu/drop-down-placeholder'
 
 function App() {
     return (
@@ -48,21 +49,49 @@ function App() {
                     itemsRight={[
                         {
                             component: (
-                                <DropDownMenu
+                                <DropDownPlaceholder
                                     align={'right'}
-                                    menuItems={[
-                                        { title: 'Меню 1' },
-                                        { title: 'Меню 2' },
-                                    ]}
+                                    dropDownWidth={400}
+                                    buttonComponent={
+                                        <Btn
+                                            type={'primary'}
+                                            title={'user'}
+                                            outline={true}
+                                        >
+                                            <span
+                                                className={'dropdown_arrow'}
+                                            />
+                                        </Btn>
+                                    }
                                 >
-                                    <Btn
-                                        type={'primary'}
-                                        title={'user'}
-                                        outline={true}
-                                    >
-                                        <span className={'dropdown_arrow'} />
-                                    </Btn>
-                                </DropDownMenu>
+                                    <Card title={'sing in'}>
+                                        <DataInput
+                                            label={'login'}
+                                            value={''}
+                                            required={true}
+                                            placeholder={'Введите логин'}
+                                        />
+                                        <DataInput
+                                            label={'password'}
+                                            type={'password'}
+                                        />
+                                        <DataToggle
+                                            label={'Remember'}
+                                            value={false}
+                                        />
+                                        <CardFooter>
+                                            <Btn
+                                                title={'Login'}
+                                                type={'primary'}
+                                                outline={true}
+                                            />
+                                            <Btn
+                                                title={'Cancel'}
+                                                type={'danger'}
+                                            />
+                                        </CardFooter>
+                                    </Card>
+                                </DropDownPlaceholder>
                             ),
                         },
                     ]}
@@ -70,6 +99,7 @@ function App() {
                 <div className={'content-layout'}>
                     <DropDownMenu
                         menuItems={[{ title: 'Меню 1' }, { title: 'Меню 2' }]}
+                        dropDownWidth={500}
                     >
                         <Btn type={'primary'} title={'user'} outline={true}>
                             <span className={'dropdown_arrow'} />

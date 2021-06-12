@@ -1,19 +1,17 @@
 import React from 'react'
 import Menu from './menu'
 import './drop-down-menu.css'
+import DropDownPlaceholder from './drop-down-placeholder'
 
-const DropDownMenu = ({ menuItems, align, children }) => {
+const DropDownMenu = ({ menuItems, align, dropDownWidth, children }) => {
     return (
-        <div className="dropdown">
-            {children}
-            <div
-                className={`dropdown_content ${
-                    align === 'right' ? 'dropdown_content__right' : ''
-                }`}
-            >
-                <Menu items={menuItems} />
-            </div>
-        </div>
+        <DropDownPlaceholder
+            align={align}
+            dropDownWidth={dropDownWidth}
+            buttonComponent={children}
+        >
+            <Menu items={menuItems} />
+        </DropDownPlaceholder>
     )
 }
 
