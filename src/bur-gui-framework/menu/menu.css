@@ -16,9 +16,9 @@
 }
 .menu .menu_item:hover {
   background-color: #e4e4e4;
-  -webkit-box-shadow: 0px 5px 5px -5px #d0d4d9 inset, 0px -5px 5px -5px #d0d4d9 inset;
-  -moz-box-shadow: 0px 5px 5px -5px #d0d4d9 inset, 0px -5px 5px -5px #d0d4d9 inset;
-  box-shadow: 0px 5px 5px -5px #d0d4d9 inset, 0px -5px 5px -5px #d0d4d9 inset;
+  -webkit-box-shadow: 0 5px 5px -5px #d0d4d9 inset, 0 -5px 5px -5px #d0d4d9 inset;
+  -moz-box-shadow: 0 5px 5px -5px #d0d4d9 inset, 0 -5px 5px -5px #d0d4d9 inset;
+  box-shadow: 0 5px 5px -5px #d0d4d9 inset, 0 -5px 5px -5px #d0d4d9 inset;
 }
 .menu .menu_item.menu_item__active {
   background-color: #617680;

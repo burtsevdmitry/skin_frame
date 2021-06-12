@@ -46,7 +46,7 @@ const DataTable = ({
                                             : ''
                                     }
                                 >
-                                    {column.renderHeaderCallback
+                                    {column && column.renderHeaderCallback
                                         ? column.renderHeaderCallback(
                                               column.fieldName,
                                               column.title

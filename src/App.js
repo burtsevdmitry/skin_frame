@@ -326,7 +326,7 @@ function App() {
                                     backgroundColor: '#e1fcb3',
                                 }
                             }
-                            return
+                            return {}
                         }}
                         columns={[
                             {

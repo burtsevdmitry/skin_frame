@@ -6,7 +6,6 @@
 }
 .data-table table {
   width: 100%;
-  border: none;
   border-collapse: separate;
   border-spacing: 0;
   border: 1px solid #d0d4d9;
@@ -40,9 +39,9 @@
 }
 .data-table table tbody tr:hover {
   background-color: #ebebeb;
-  -webkit-box-shadow: 0px 5px 5px -5px #d0d4d9 inset, 0px -5px 5px -5px #d0d4d9 inset;
-  -moz-box-shadow: 0px 5px 5px -5px #d0d4d9 inset, 0px -5px 5px -5px #d0d4d9 inset;
-  box-shadow: 0px 5px 5px -5px #d0d4d9 inset, 0px -5px 5px -5px #d0d4d9 inset;
+  -webkit-box-shadow: 0 5px 5px -5px #d0d4d9 inset, 0 -5px 5px -5px #d0d4d9 inset;
+  -moz-box-shadow: 0 5px 5px -5px #d0d4d9 inset, 0 -5px 5px -5px #d0d4d9 inset;
+  box-shadow: 0 5px 5px -5px #d0d4d9 inset, 0 -5px 5px -5px #d0d4d9 inset;
 }
 .data-table table tbody tr:nth-child(even) {
   background: #F8F8F8;
